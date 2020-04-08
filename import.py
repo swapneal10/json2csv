@@ -4,11 +4,9 @@ import pandas as pd
 from pandas import json_normalize
 from flatten_json import flatten 
 
-with open('output.json') as data_file:
-    with open('output.csv', 'w',newline='') as fp.
-        for line in data_file:
-        data = json.load(line) # load as json
-f.close()   
+f = open('output.json', 'r+') # open the json file
+data = json.load(f) # load as json
+f.close()  
 
 flat_json = flatten(data) 
 df = json_normalize(flat_json)  
